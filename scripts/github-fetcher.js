@@ -1,5 +1,5 @@
 const username = 'kubilaiswf';
-const token = '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'; 
+const token = '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'; 
 
 fetch(`https://api.github.com/users/${username}/repos`, {
     headers: {
