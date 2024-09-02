@@ -1,0 +1,93 @@
+body {
+    font-family: "Inter", "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif !important;
+    background-color: #adbfd1;
+    margin: 0;
+    padding: 20px;
+    scroll-behavior: smooth;
+    color: #333;
+    /* deneme işi */
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    font-size: 2.5rem; /* Başlık boyutunu koruyoruz */
+}
+
+ul#repo-list li {
+    background-color: #fff;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+    transition: transform 0.2s ease;
+}
+
+ul#repo-list li:hover {
+    transform: scale(1.02);
+}
+
+ul#repo-list a {
+    text-decoration: none;
+    color: #0366d6;
+    font-weight: bold;
+}
+
+ul#repo-list a:hover {
+    text-decoration: underline;
+}
+
+ul#repo-list p {
+    margin: 5px 0 0;
+    color: #555;
+}
+
+section {
+    padding: 60px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Hafif alt kenarlık */
+}
+
+.intro {
+    background-color: #adbfd1;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 25px;
+    margin: 0 5px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #d1d1d1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .intro {
+        padding: 20px;
+        height: auto;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .social-icons {
+        flex-direction: column;
+    }
+
+    .social-icons a {
+        margin: 10px 0;
+    }
+}
