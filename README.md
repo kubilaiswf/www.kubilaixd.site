@@ -1,4 +1,4 @@
-Portfolio Project - kubilaixd.site
+Portfolio Project - www.kubilaixd.site
 
 This project is my personal portfolio website, where I showcase my experiences and projects in the world of software and technology. It includes the following sections:
 
