@@ -1,21 +1,21 @@
 body {
     font-family: "Inter", "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif !important;
-    background-color: #adbfd1;
+    background-color: #202127 !important;
+    color: #d2d8e2 !important;
     margin: 0;
     padding: 20px;
     scroll-behavior: smooth;
-    color: #333;
     /* deneme işi */
 }
 
 h1 {
-    color: #333;
+    color: #74747c;
     text-align: center;
     font-size: 2.5rem; /* Başlık boyutunu koruyoruz */
 }
 
 ul#repo-list li {
-    background-color: #fff;
+    background-color: #232324;
     margin: 10px 0;
     padding: 15px;
     border-radius: 8px;
@@ -29,7 +29,7 @@ ul#repo-list li:hover {
 
 ul#repo-list a {
     text-decoration: none;
-    color: #0366d6;
+    color: #b5bbc3;
     font-weight: bold;
 }
 
@@ -46,10 +46,13 @@ section {
     padding: 60px 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Hafif alt kenarlık */
 }
+#about{
+    height: 65vh;
+    padding: 70px 0;
+}
 
 .intro {
-    background-color: #adbfd1;
-    color: #fff;
+    
     height: 100vh;
     display: flex;
     align-items: center;
@@ -62,14 +65,14 @@ section {
 }
 
 .social-icons a {
-    color: #fff;
+    color: #d2d8e2;
     font-size: 25px;
     margin: 0 5px;
     transition: color 0.3s;
 }
 
 .social-icons a:hover {
-    color: #d1d1d1;
+    color: #f3f6fc;
 }
 
 /* Responsive Design */
@@ -91,6 +94,33 @@ section {
         margin: 10px 0;
     }
 }
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translatex(-100%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+@media(prefers-reduced-motion){
+    .hidden{
+        transition: none;
+      
+    }
+}
+
+
+
+
+
+
+
 
 /* Dil rozetleri */
 .language-badge {
