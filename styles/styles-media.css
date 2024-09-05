@@ -1,25 +1,34 @@
 @media (max-width: 768px) {
     .intro {
         padding: 20px;
-        height: auto;
+        height: 100vh;
     }
 
     h1 {
         font-size: 2.5rem;
     }
-
-    .social-icons {
-        flex-direction: column;
-    }
-
-    .social-icons a {
-        margin: 10px 0;
-    }
 }
 
 @media(prefers-reduced-motion){
+
     .hidden{
         transition: none;
       
+    }
+
+    .show{
+        transition-delay: 0.4s;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .social-icons {
+        flex-direction: row; /* Already exists: stacks icons vertically on small screens */
+        align-items: center;    /* Ensures icons are centered when stacked */
+    }
+
+    .social-icons a {
+        margin: 0 6px;
     }
 }
