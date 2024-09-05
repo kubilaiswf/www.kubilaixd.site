@@ -1,0 +1,25 @@
+@media (max-width: 768px) {
+    .intro {
+        padding: 20px;
+        height: auto;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .social-icons {
+        flex-direction: column;
+    }
+
+    .social-icons a {
+        margin: 10px 0;
+    }
+}
+
+@media(prefers-reduced-motion){
+    .hidden{
+        transition: none;
+      
+    }
+}

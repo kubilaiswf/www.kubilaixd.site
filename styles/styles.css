@@ -52,7 +52,6 @@ section {
 }
 
 .intro {
-    
     height: 100vh;
     display: flex;
     align-items: center;
@@ -60,6 +59,7 @@ section {
     text-align: center;
 }
 
+/* Iconlar */
 .social-icons {
     margin-top: 20px;
 }
@@ -76,30 +76,11 @@ section {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-    .intro {
-        padding: 20px;
-        height: auto;
-    }
-
-    h1 {
-        font-size: 2.5rem;
-    }
-
-    .social-icons {
-        flex-direction: column;
-    }
-
-    .social-icons a {
-        margin: 10px 0;
-    }
-}
-
 .hidden {
     opacity: 0;
     filter: blur(5px);
     transform: translatex(-100%);
-    transition: all 1s;
+    transition: all 1s ease-in-out;
 }
 
 .show {
@@ -107,20 +88,6 @@ section {
     filter: blur(0);
     transform: translateX(0);
 }
-
-@media(prefers-reduced-motion){
-    .hidden{
-        transition: none;
-      
-    }
-}
-
-
-
-
-
-
-
 
 /* Dil rozetleri */
 .language-badge {
@@ -132,7 +99,7 @@ section {
     margin-left: 10px;
     font-weight: bold;
 }
-
+/* Kodlama rozetleri */
 .language-badge.js { background-color: #f1e05a; }  /* JavaScript */
 .language-badge.python { background-color: #3572A5; }  /* Python */
 .language-badge.html { background-color: #e34c26; }  /* HTML */
