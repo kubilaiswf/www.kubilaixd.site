@@ -121,6 +121,42 @@ section {
     }
 }
 
+.btn-cv {
+    text-decoration: none; /* Altı çizili olmasın */
+    color: #fff; /* Yazı rengi (varsayılan beyaz) */
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    outline: none; /* Mavi çerçeve olmasın */
+    border: none; /* Buton sınırını kaldır */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Geçiş animasyonu */
+}
+
+.btn-cv:hover {
+    color: #d2d8e2; /* Üzerine gelince metin rengi (örnek: turuncu) */
+    background-color: #333; /* Üzerine gelince arka plan rengi (örnek: koyu gri) */
+}
+
+.btn-cv::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px; /* Çizgi kalınlığı */
+    background-color: #d2d8e2; /* Üzerine gelince çizgi rengi (örnek: turuncu) */
+    transition: width 0.4s ease-in-out; /* Çizgi genişleme ve daralma animasyonu */
+}
+
+.btn-cv:hover::after {
+    width: 100%; /* Üzerine gelince çizgi tam genişlesin */
+}
+
+.btn-cv:not(:hover)::after {
+    width: 0; /* Fare ayrılınca çizgi kaybolsun */
+    left: 0;
+}
+
 /* Kodlama rozetleri */
 .language-badge.js { background-color: #f1e05a; }  /* JavaScript */
 .language-badge.python { background-color: #3572A5; }  /* Python */
