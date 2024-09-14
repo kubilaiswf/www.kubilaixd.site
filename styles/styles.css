@@ -108,6 +108,19 @@ section {
     margin-left: 10px;
     font-weight: bold;
 }
+
+.cursor {
+    font-size: 85%;
+    color: #d2d8e2; /* Match text color */
+    animation: blink 1s step-start infinite; /* Blinking effect */
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0; /* Invisible at 50% of the cycle */
+    }
+}
+
 /* Kodlama rozetleri */
 .language-badge.js { background-color: #f1e05a; }  /* JavaScript */
 .language-badge.python { background-color: #3572A5; }  /* Python */
