@@ -160,8 +160,8 @@ section {
 /* Kodlama rozetleri */
 .language-badge.js { background-color: #f1e05a; }  /* JavaScript */
 .language-badge.python { background-color: #3572A5; }  /* Python */
-.language-badge.html { background-color: #e34c26; }
-.language-badge.jupyter { background-color: #DA5B0B; }  /* HTML */
+.language-badge.html { background-color: #e34c26; } /* HTML */
+.language-badge.jupyter { background-color: #DA5B0B; }  /* Jupyter Notebook */
 .language-badge.css { background-color: #563d7c; }  /* CSS */
 .language-badge.cpp { background-color: #f34b7d; }  /* C++ */
 .language-badge.java { background-color: #b07219; }  /* Java */
