@@ -5,7 +5,155 @@
     }
 
     h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
+    }
+
+    .lead {
+        font-size: 1.2rem;
+    }
+
+    section {
+        padding: 60px 15px;
+    }
+
+    .social-icons {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .social-icons a {
+        font-size: 22px;
+        margin: 0 10px;
+        height: 40px;
+        width: 40px;
+    }
+    
+    ul#repo-list li {
+        padding: 15px;
+        margin: 15px 0;
+    }
+    
+    .navbar-nav {
+        background: transparent !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        box-shadow: none !important;
+        border: none !important;
+        padding: 10px;
+        border-radius: 8px;
+        margin-top: 10px;
+    }
+    
+    .navbar-nav.scrolled {
+        background: transparent !important;
+        backdrop-filter: blur(2px) !important;
+        -webkit-backdrop-filter: blur(2px) !important;
+        box-shadow: 0 4px 24px 0 rgba(0,0,0,0.18) !important;
+        border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+    
+    .scroll-indicator {
+        bottom: 15px;
+    }
+    
+    .language-badge {
+        margin-top: 5px;
+        margin-left: 0;
+        display: inline-block;
+        font-size: 10px;
+        padding: 3px 8px;
+    }
+    
+    ul#repo-list a {
+        display: block;
+        margin-bottom: 8px;
+    }
+    
+    #particles-js {
+        opacity: 0.4;
+    }
+    
+    #about {
+        min-height: auto;
+        padding: 60px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .lead {
+        font-size: 1rem;
+    }
+    
+    #about p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+    
+    .social-icons a {
+        font-size: 18px;
+        margin: 0 8px;
+        height: 35px;
+        width: 35px;
+    }
+    
+    .btn-cv {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+    
+    section {
+        padding: 70px 20px;
+    }
+    
+    ul#repo-list li {
+        padding: 18px;
+    }
+}
+
+@media (min-width: 992px) {
+    .nav-transparent {
+        background: transparent !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        transition: all 0.3s ease;
+        padding: 20px 0;
+        box-shadow: none !important;
+    }
+    
+    .nav-transparent.scrolled {
+        background: transparent !important;
+        backdrop-filter: blur(2px) !important;
+        -webkit-backdrop-filter: blur(2px) !important;
+        box-shadow: 0 4px 24px 0 rgba(0,0,0,0.18) !important;
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+    
+    .navbar .nav-link {
+        padding: 0.5rem 1rem;
+        margin: 0 5px;
+        position: relative;
+        color: rgba(243, 246, 252, 0.85);
+        transition: color 0.3s ease;
+    }
+    
+    .navbar .nav-link::after {
+        content: none;
+    }
+    
+    .navbar .nav-link:hover {
+        color: #ffffff;
+        text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
     }
 }
 
@@ -21,14 +169,21 @@
     }
 }
 
-@media (max-width: 768px) {
-
-    .social-icons {
-        flex-direction: row; /* Already exists: stacks icons vertically on small screens */
-        align-items: center;    /* Ensures icons are centered when stacked */
-    }
-
-    .social-icons a {
-        margin: 0 6px;
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
     }
 }
+
+/*
+
+design by
+ _        _    _ _      _            __ 
+| |___  _| |__(_) |__ _(_)____ __ __/ _|
+| / / || | '_ \ | / _` | (_-< V  V /  _|
+|_\_\\_,_|_.__/_|_\__,_|_/__/\_/\_/|_|  
+
+*/

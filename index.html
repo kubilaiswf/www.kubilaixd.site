@@ -4,17 +4,16 @@
 <head>
     <meta charset="UTF-8">
 
-    <!--CACHE SORUNU ICIN-->
     <meta http-equiv='cache-control' content='no-cache'>
     <meta http-equiv='expires' content='0'>
     <meta http-equiv='pragma' content='no-cache'>
-    <!--CACHE SORUNU ICIN-->
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>kubilaixd.site</title>
+    
     <link rel="stylesheet" href="/styles/styles.css">
     <link rel="stylesheet" href="styles/styles-media.css">
-    <!-- ico -->
+
     <link rel="apple-touch-icon" sizes="57x57" href="/ico/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/ico/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/ico/apple-icon-72x72.png">
@@ -33,20 +32,41 @@
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
-    <!-- fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-
-    <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
 
 <body>
-    <!-- Giris -->
+    <div id="particles-js"></div>
+    <div class="mouse-trail-container"></div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top nav-transparent">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#intro">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
     <section id="intro" class="intro">
         <div class="container">
-            <h1>kubilay</h1>
+            <h1 class="animated-title">kubilay</h1>
             <h2 class="lead"><span id="typing-text"></span><span class="cursor">|</span></h2>
             <div class="social-icons">
                 <a href="https://instagram.com/kubilai.swf" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -54,40 +74,36 @@
                         class="fab fa-linkedin"></i></a>
                 <a href="https://github.com/kubilaiswf" target="_blank"><i class="fab fa-github"></i></a>
             </div>
+    </section>
+
+    <section id="about" class="about hidden" data-aos="fade-up">
+        <div class="container">
+            <h1 class="section-title">Me</h1>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <p data-aos="fade-up" data-aos-delay="200">I have been interested in computer technologies since my childhood and developed various skills in this
+                        field. I gained experience in technical issues such as port forwarding by setting up a server. By
+                        completing the projects I started with enthusiasm with determination I aim to achieve high quality
+                        results. I am experienced in server administration, game development and software program creation. In
+                        the future, I hope that the programs I develop will be widely recognized and used. <a
+                            href="pdf/kubilay-cv.pdf" target="_blank" class="resume-link">View My Resume <i class="fas fa-long-arrow-alt-right"></i></a></p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <script src="scripts/typing.js"></script>
-
-    <!-- Hakkimda -->
-    <section id="about" class="about hidden">
+    <section id="projects" class="projects hidden" data-aos="fade-up">
         <div class="container">
-            <h1>Me</h1>
-            <p>I have been interested in computer technologies since my childhood and developed various skills in this
-                field. I gained experience in technical issues such as port forwarding by setting up a server. By
-                completing the projects I started with enthusiasm with determination I aim to achieve high quality
-                results. I am experienced in server administration, game development and software program creation. In
-                the future, I hope that the programs I develop will be widely recognized and used. <a
-                    href="pdf/kubilay-cv.pdf" target="_blank" class="btn-cv">Download My CV.</a></p>
-        </div>
-    </section>
-
-
-    <section id="projects" class="projects hidden">
-        <div class="container">
-            <h2 class="text-center mb-5">Projects</h2>
+            <h2 class="text-center mb-5 section-title">Projects</h2>
             <ul id="repo-list" class="list-group">
-                <!-- Projeler  -->
-
-
-                <li class="list-group-item mb-3">
+                <li class="list-group-item mb-3" data-aos="fade-up" data-aos-delay="100">
                     <a href="https://github.com/kubilaiswf/face-2-cursor" target="_blank" class="font-weight-bold">Face
                         2 Cursor</a>
                     <span class="language-badge python">Python</span>
                     <p class="mb-1 text-muted">FaceCursor is a Python project that enables mouse control by tracking
                         facial movements over a webcam.</p>
                 </li>
-                <li class="list-group-item mb-3">
+                <li class="list-group-item mb-3" data-aos="fade-up" data-aos-delay="200">
                     <a href="https://github.com/kubilaiswf/spam-classification-supervised-unsupervised" target="_blank"
                         class="font-weight-bold">Spam Classification with Supervised and Unsupervised Learning</a>
                     <span class="language-badge jupyter">Jupyter Notebook</span>
@@ -95,7 +111,7 @@
                         (Logistic Regression, Decision Trees) and unsupervised (Mini Batch k-Means) learning algorithms.
                     </p>
                 </li>
-                <li class="list-group-item mb-3">
+                <li class="list-group-item mb-3" data-aos="fade-up" data-aos-delay="300">
                     <a href="https://github.com/kubilaiswf/kubicord" target="_blank"
                         class="font-weight-bold">kubicord</a>
                     <span class="language-badge html">HTML</span> <span class="language-badge css">CSS</span> <span
@@ -104,7 +120,7 @@
                         WebSocket for real-time communication. This application enables users to exchange messages
                         through a direct peer-to-peer connection, facilitated by a signaling server using WebSocket.</p>
                 </li>
-                <li class="list-group-item mb-3">
+                <li class="list-group-item mb-3" data-aos="fade-up" data-aos-delay="400">
                     <a href="https://github.com/kubilaiswf/stokYonetimSistemi" target="_blank"
                         class="font-weight-bold">kurebiad</a>
                     <span class="language-badge html">HTML</span> <span class="language-badge css">CSS</span> <span
@@ -114,16 +130,38 @@
                         JavaScript, HTML, and CSS, kurebiad supports structured manga directories and provides smooth
                         chapter navigation.</p>
                 </li>
-                <!-- Projeler  -->
-                <script src="scripts/kaydirmali.js"></script>
             </ul>
         </div>
     </section>
 
-    <!-- Bootstrap -->
+    <footer class="py-4 text-center">
+        <div class="container">
+            <p class="was-here">░▒▓█ 0x6b7562696c6169737766 was here █▓▒░</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="scripts/background-particles.js"></script>
+    
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script src="scripts/typing.js" defer></script>
+    <script src="scripts/kaydirmali.js" defer></script>
+    <script src="scripts/imza.js" defer></script>
+
 </body>
 
 </html>
+
+<!--
+
+design by
+ _        _    _ _      _            __ 
+| |___  _| |__(_) |__ _(_)____ __ __/ _|
+| / / || | '_ \ | / _` | (_-< V  V /  _|
+|_\_\\_,_|_.__/_|_\__,_|_/__/\_/\_/|_|  
+
+-->

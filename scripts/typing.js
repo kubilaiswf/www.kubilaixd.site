@@ -1,15 +1,48 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const text = "junior developer";
-    const typingSpeed = 80; // Speed of typing in milliseconds
-    let index = 0;
-
+    const phrases = [
+        "junior developer",
+        "software enthusiast",
+        "web designer",
+        "github.com/kubilaiswf",
+        "instagram.com/kubilaiswf"
+    ];
+    
+    const typingSpeed = 80;
+    const erasingSpeed = 40;
+    const delayBetweenPhrases = 1500;
+    
+    let phraseIndex = 0;
+    let charIndex = 0;
+    let isTyping = true;
+    const textElement = document.getElementById("typing-text");
+    
     function typeText() {
-        if (index < text.length) {
-            document.getElementById("typing-text").textContent += text.charAt(index);
-            index++;
-            setTimeout(typeText, typingSpeed);
+        if (isTyping) {
+            if (charIndex < phrases[phraseIndex].length) {
+                textElement.textContent += phrases[phraseIndex].charAt(charIndex);
+                charIndex++;
+                setTimeout(typeText, typingSpeed);
+            } else {
+                isTyping = false;
+                setTimeout(typeText, delayBetweenPhrases);
+            }
+        } else {
+            if (charIndex > 0) {
+                textElement.textContent = phrases[phraseIndex].substring(0, charIndex - 1);
+                charIndex--;
+                setTimeout(typeText, erasingSpeed);
+            } else {
+                isTyping = true;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                setTimeout(typeText, typingSpeed);
+            }
         }
     }
-
-    typeText(); // Start typing animation
+    
+    typeText();
+    
+    const animatedTitle = document.querySelector('.animated-title');
+    if (animatedTitle) {
+        animatedTitle.classList.add('show');
+    }
 });
