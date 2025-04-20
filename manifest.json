@@ -1,37 +1,50 @@
 {
-    "name": "Kubilaixd Site",
-    "short_name": "Kubilaixd",
-    "description": "Kubilaixd site - Junior Developer portfolio",
-    "start_url": "/index.html",
-    "display": "standalone",
-    "background_color": "#ffffff",
-    "theme_color": "#ffffff",
-    "icons": [
-      {
-        "src": "ico/android-icon-192x192.png",
-        "sizes": "192x192",
-        "type": "image/png"
-      },
-      {
-        "src": "ico/apple-icon-180x180.png",
-        "sizes": "180x180",
-        "type": "image/png"
-      },
-      {
-        "src": "ico/favicon-96x96.png",
-        "sizes": "96x96",
-        "type": "image/png"
-      },
-      {
-        "src": "ico/favicon-32x32.png",
-        "sizes": "32x32",
-        "type": "image/png"
-      },
-      {
-        "src": "ico/favicon-16x16.png",
-        "sizes": "16x16",
-        "type": "image/png"
-      }
-    ]
-  }
-  
+  "name": "Kubilay Karaçar | Software Developer Portfolio",
+  "short_name": "Kubilay Karaçar",
+  "description": "Personal portfolio of Kubilay Karaçar (Kubilaiswf) - Software Developer specializing in Python, Machine Learning and Web Development",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "scope": "/",
+  "orientation": "portrait",
+  "lang": "tr-TR",
+  "categories": ["portfolio", "development", "personal", "software engineer", "developer"],
+  "keywords": ["Kubilay Karaçar", "Kubilaiswf", "developer", "software engineer", "machine learning", "python", "web development"],
+  "icons": [
+    {
+      "src": "ico/android-icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "ico/apple-icon-180x180.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "ico/favicon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "ico/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "ico/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "ico/apple-icon-180x180.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "label": "Kubilay Karaçar Portfolio Homepage"
+    }
+  ]
+}

@@ -129,6 +129,11 @@ section {
     transform: translateY(0);
 }
 
+/* About Me section başlığı için ek stil */
+#about .section-title {
+    margin-bottom: 50px; /* 40px'ten 50px'e artırıldı */
+}
+
 .intro {
     height: 100vh;
     display: flex;
@@ -430,24 +435,37 @@ ul#repo-list li:hover .language-badge {
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
     transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+    border-bottom: none !important; /* Başlangıçta kenarlık olmasın */
 }
 
-.nav-transparent.scrolled {
-    background: transparent !important;
-    backdrop-filter: blur(2px) !important;
-    -webkit-backdrop-filter: blur(2px) !important;
-    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.18) !important;
-    border-bottom: 1px solid rgba(255,255,255,0.04);
+.navbar {
+    height: 60px; /* Sabit yükseklik */
+    min-height: 60px; /* Minimum yükseklik */
+    max-height: 60px; /* Maksimum yükseklik */
+    padding: 0.5rem 1rem !important; /* Sabit padding */
+    transition: background-color 0.4s cubic-bezier(0.19, 1, 0.22, 1),
+                border-color 0.4s cubic-bezier(0.19, 1, 0.22, 1),
+                box-shadow 0.4s cubic-bezier(0.19, 1, 0.22, 1) !important;
+}
+
+.navbar-brand {
+    padding: 0 !important;
+    margin: 0 !important;
+    height: auto !important;
+}
+
+.navbar-nav {
+    height: 100% !important;
+    display: flex;
+    align-items: center;
 }
 
 .navbar .nav-link {
     transition: all 0.4s ease;
     color: rgba(243, 246, 252, 0.85);
-}
-
-.navbar .nav-link:hover {
-    color: #ffffff;
-    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+    height: auto !important;
+    padding: 0.5rem 1rem !important; /* Sabit padding */
+    line-height: 1.2 !important; /* Sabit satır yüksekliği */
 }
 
 .section-title {
@@ -516,12 +534,54 @@ section, nav, footer, .container {
     z-index: 10;
 }
 
-/*
+.contact-link {
+    color: #d2d8e2;
+    text-decoration: none;
+    position: relative;
+    font-weight: 500;
+    transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+    padding: 3px 8px;
+    border-radius: 4px;
+}
 
-design by
- _        _    _ _      _            __ 
-| |___  _| |__(_) |__ _(_)____ __ __/ _|
-| / / || | '_ \ | / _` | (_-< V  V /  _|
-|_\_\\_,_|_.__/_|_\__,_|_/__/\_/\_/|_|  
+.contact-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #d2d8e2, transparent);
+    transform: scaleX(0.3);
+    opacity: 0.5;
+    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
 
-*/
+.contact-link:hover {
+    color: #ffffff;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    animation: pulse 1.5s infinite;
+    text-decoration: none;
+}
+
+.contact-link:hover::after {
+    transform: scaleX(1);
+    opacity: 0.8;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+@keyframes pulse {
+    0% {
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.4);
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    }
+    100% {
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+    }
+}

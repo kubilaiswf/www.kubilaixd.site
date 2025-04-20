@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+Sitemap: https://kubilaixd.site/sitemap.xml
+
+# Allow all crawlers full access
+User-agent: *
+Disallow:
+
+# Specific rules for Google bots
+User-agent: Googlebot
+Allow: /
+User-agent: Googlebot-Image
+Allow: /ico/
