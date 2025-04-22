@@ -2,7 +2,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const phrases = [
         "junior developer",
         "software enthusiast",
-        "web designer"
+        "web designer",
+        "AI/ML enthusiast",
+        "Computer Engineering Student"
     ];
     
     const typingSpeed = 80;
