@@ -73,4 +73,30 @@ document.addEventListener("DOMContentLoaded", () => {
             setTheme(e.matches ? "dark" : "light");
         }
     });
+
+    // Profil vektörel görselini temaya göre ayarla
+    function updateProfileVector() {
+        const theme = htmlElement.getAttribute("data-theme") || "dark";
+        const vectorImg = document.querySelector('.profile-photo-vector');
+        if (vectorImg) {
+            if (theme === "light") {
+                vectorImg.src = "ico/vektorel-beyaz.png";
+            } else {
+                vectorImg.src = "ico/vektore-siyah.png";
+            }
+        }
+    }
+    updateProfileVector();
+
+    // Tema değişince de güncelle
+    if (themeToggle) {
+        themeToggle.addEventListener("click", () => {
+            setTimeout(updateProfileVector, 10); // Tema geçişi sonrası güncelle
+        });
+    }
+
+    // Sistem teması değişirse de güncelle
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => {
+        setTimeout(updateProfileVector, 10);
+    });
 });

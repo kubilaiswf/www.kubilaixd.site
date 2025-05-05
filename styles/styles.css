@@ -230,7 +230,7 @@ section {
     opacity: 1;
 }
 
-.social-icons a:hover i {
+social-icons a:hover i {
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
@@ -1298,4 +1298,191 @@ html[data-theme="light"] .contact-button:hover {
         transform: translate(0, -50%);
         font-size: 0.75rem;
     }
+}
+
+/* Profil Fotoğrafı Stilleri */
+.profile-photo-container {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 30px;
+    position: relative;
+}
+
+.profile-photo-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.profile-photo-wrapper:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.profile-photo-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    stroke: var(--text-color);
+    stroke-width: 1;
+    z-index: 2;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    padding: 15px;
+}
+
+.profile-photo-real {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: none;
+}
+
+.profile-photo-real img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* Hover Efekti */
+.profile-photo-wrapper:hover .profile-photo-svg {
+    opacity: 0.3;
+    transform: scale(0.95);
+}
+
+.profile-photo-wrapper:hover .profile-photo-real {
+    opacity: 1;
+    transform: none;
+}
+
+/* Light Theme için Özelleştirme */
+html[data-theme="light"] .profile-photo-svg {
+    stroke: var(--text-color);
+}
+
+/* Masaüstü efekti için ince ayar */
+@media (min-width: 992px) {
+    .profile-photo-container {
+        margin-bottom: 40px;
+    }
+    
+    .profile-photo-wrapper {
+        border-radius: 25px;
+    }
+    
+    .profile-photo-wrapper:hover {
+        transform: scale(1.08);
+    }
+}
+
+/* Intro özel stili - fotoğraf ile başlık arası boşluk */
+.animated-title {
+    margin-top: 10px;
+}
+
+/* Profile Photo Vector Styling */
+.profile-photo-vector {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    transition: opacity 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    object-fit: cover;
+    border-radius: 20px;
+    padding: 0;
+}
+
+.profile-photo-wrapper:hover .profile-photo-vector {
+    opacity: 0;
+    transform: none;
+}
+
+html[data-theme="light"] .profile-photo-vector {
+    /* Light tema için vektörel çizim PNG'si farklı olacak, JS ile src değişecek */
+}
+
+/* Pozisyon başlığı için gelişmiş stiller */
+.position-title {
+    display: inline-block;
+    padding: 6px 14px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-color);
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 50px;
+    margin-top: 12px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    transform: translateY(0);
+}
+
+.branch-card:hover .position-title {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateY(0); /* Yukarı hareket kaldırıldı */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Çalışma dönemi için gelişmiş stiller */
+.work-period {
+    display: inline-block;
+    padding: 4px 12px;
+    font-size: 0.8rem;
+    color: var(--secondary-text);
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 30px;
+    margin: 5px 0 15px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    letter-spacing: 0.3px;
+}
+
+.branch-card:hover .work-period {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(0); /* Yukarı hareket kaldırıldı */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Light tema için özel tasarım */
+html[data-theme="light"] .position-title {
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    color: var(--text-color);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+html[data-theme="light"] .branch-card:hover .position-title {
+    background: rgba(0, 0, 0, 0.07);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    /* transform özelliği kaldırıldı */
+}
+
+html[data-theme="light"] .work-period {
+    background: rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    color: var(--secondary-text);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+html[data-theme="light"] .branch-card:hover .work-period {
+    background: rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    /* transform özelliği kaldırıldı */
 }
