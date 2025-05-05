@@ -218,6 +218,16 @@ html[data-theme="light"] ul#repo-list li {
     background-color: #fff;
 }
 
+/* Beyaz tema için scroll-down-arrow renk ayarı */
+html[data-theme="light"] .scroll-down-arrow svg path {
+    stroke: rgba(0, 0, 0, 0.8);
+    filter: none;
+}
+
+html[data-theme="light"] .scroll-down-arrow svg {
+    filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.3));
+}
+
 html[data-theme="light"] ul#repo-list li::before {
     background: linear-gradient(180deg, #6d6d75, #555559); /* Changed from blue to dark gray */
     opacity: 0.8;

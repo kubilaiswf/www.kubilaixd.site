@@ -74,12 +74,14 @@ function startParticles() {
   document.addEventListener('mousemove', function(e) {
     if (!canvas) return;
     const rect = canvas.getBoundingClientRect();
+    // devicePixelRatio düzeltmesi eklendi
+    const dpr = window.devicePixelRatio || 1;
     if (
       e.clientX >= rect.left && e.clientX <= rect.right &&
       e.clientY >= rect.top && e.clientY <= rect.bottom
     ) {
-      mouse.x = e.clientX - rect.left;
-      mouse.y = e.clientY - rect.top;
+      mouse.x = (e.clientX - rect.left) * dpr;
+      mouse.y = (e.clientY - rect.top) * dpr;
       isOverCanvas = true;
     } else {
       isOverCanvas = false;
