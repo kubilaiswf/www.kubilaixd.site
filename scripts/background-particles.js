@@ -9,32 +9,32 @@ function startParticles() {
   particlesJS('particles-js', {
     "particles": {
       "number": {
-        "value": 100,
+        "value": 120,          // Slightly increased for better distribution
         "density": {
           "enable": true,
-          "value_area": 1000
+          "value_area": 1500   // Increased to spread particles more evenly
         }
       },
       "color": { "value": "#4a4a54" },
       "shape": { "type": "circle", "stroke": { "width": 0, "color": "#000" } },
-      "opacity": { "value": 0.6, "random": false },
-      "size": { "value": 2, "random": false },
+      "opacity": { "value": 0.5, "random": true }, // Added randomness to opacity
+      "size": { "value": 2, "random": true },      // Added size randomness
       "line_linked": {
         "enable": true,
-        "distance": 180,
+        "distance": 150,       // Reduced connection distance
         "color": "#4a4a54",
-        "opacity": 0.5,
-        "width": 1.2
+        "opacity": 0.4,        // Slightly reduced opacity for subtler connections
+        "width": 1
       },
       "move": {
         "enable": true,
-        "speed": 0.4,
+        "speed": 0.8,          // Increased speed to prevent clumping
         "direction": "none",
-        "random": false,
+        "random": true,        // Add randomness to movement
         "straight": false,
-        "out_mode": "out",
-        "bounce": false,
-        "attract": { "enable": true, "rotateX": 600, "rotateY": 1200 }
+        "out_mode": "bounce",  // Changed to bounce to keep particles in view
+        "bounce": true,
+        "attract": { "enable": false } // Disabled the attract feature that causes clumping
       }
     },
     "interactivity": {
@@ -45,7 +45,7 @@ function startParticles() {
         "resize": true
       },
       "modes": {
-        "grab": { "distance": 180, "line_linked": { "opacity": 0.7 } },
+        "grab": { "distance": 150, "line_linked": { "opacity": 0.6 } },
         "bubble": { "distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3 },
         "repulse": { "distance": 200, "duration": 0.4 },
         "push": { "particles_nb": 4 },
